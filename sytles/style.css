@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+
+:root{
+    --cor-primaria: #F3F5FC;
+    --cor-secundaria: #0A3871;
+    --cor-terciaria: #D8DFE8;
+    --fonte-principal: "Inter", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-principal)
+}
+.decodificador{
+    display: flex;
+}
+.decodificador__esquerdo{
+    flex-direction: column;
+}
+.decodificador__esquerdo__cabecalho{
+
+}
+.decodificador__esquerdo__main{
+
+}
+.decodificador__esquerdo__main__texto{
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    font-size: 32px;
+    color: var(--cor-secundaria);
+    resize: none;
+    border: none;
+    width: 680px;
+    height: 288px;
+}
+.decodificador__esquerdo__rodape{
+}
+.decodificador__esquerdo__rodape__texto{
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+
+}
+.decodificador__esquerdo__rodape__botao{
+    
+}
+.decodificador__esquerdo__rodape__criptografar{
+    background-color: var(--cor-secundaria);
+    width: 328px;
+    height: 67px;
+    gap: 8px;
+    padding: 24px;
+    border-radius: 24px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    color: #FFFFFF;  
+}
+.decodificador__esquerdo__rodape__descriptografar{
+    background-color: var(--cor-terciaria);
+    border: solid 1px var(--cor-secundaria);
+    width: 328px;
+    height: 67px;
+    gap: 8px;
+    padding: 24px;
+    border-radius: 24px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    color: var(--cor-secundaria);
+
+}
+.decodificador__direito{
+
+}
+.decodificador__direito__texto{
+    border-radius: 32px;
+    border: none;
+    width: 400px;
+    height: 944px;
+    resize: none;
+    background-image: url("../assets/fundo_decodificador.svg");
+}
