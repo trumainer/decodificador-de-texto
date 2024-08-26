@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -7,33 +8,45 @@
     <link rel="stylesheet" href="./sytles/style.css">
     <title>Decodificador de texto</title>
 </head>
+
 <body>
-    <header>
-        
-    </header>
-    <main class="decodificador">
+    <header></header>
+    <main>
         <div class="decodificador__esquerdo">
             <div class="decodificador__esquerdo__cabecalho">
-                <img src="./assets/logo_alura.svg" alt="Logo alura">
-            </div>
-            <div class="decodificador__esquerdo__main">
-                <textarea class="decodificador__esquerdo__main__texto" placeholder="Digite seu texto"></textarea>
+                <img class="decodificador__esquerdo__cabecalho__logo" src="./assets/logo_alura.svg" alt="Logo alura">
+                <textarea class="decodificador__esquerdo__main__texto" id="textBox" cols="41" rows="4"
+                    placeholder="Digite seu texto"></textarea>
             </div>
             <div class="decodificador__esquerdo__rodape">
-                <img src="./assets/exclamacao.svg" alt="Exclamação">
-                <p class="decodificador__esquerdo__rodape__texto">Apenas letras minúsculas e sem acento.</p>
-                <a class="decodificador__esquerdo__rodape__criptografar">Criptografar</a>
-                <a class="decodificador__esquerdo__rodape__descriptografar">Descriptografar</a>
+                <div class="decodificador__esquerdo__rodape__aviso">
+                    <img src="./assets/exclamacao.svg" alt="Exclamação">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="decodificador__esquerdo__rodape__btn">
+                    <button onclick="criptografar()" class="decodificador__esquerdo__rodape__btn__criptografar"
+                        type="button">Criptografar</button>
+                    <button onclick="descriptografar()" class="decodificador__esquerdo__rodape__btn__descriptografar"
+                        type="button">Descriptografar</button>
+                </div>
             </div>
         </div>
-        <div class="decodificador__direito">
-            <textarea class="decodificador__direito__texto">Nenhuma mensagem encontrada</textarea>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-        </div>
-
+        <aside>
+            <div class="mensagem">
+                <img class="mensagem__bonecao" src="/assets/fundo_decodificador.svg">
+                <p class="mensagem__texto">Nenhuma mensagem encontrada</p>
+                <p class="mensagem__p">Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
+            </div>
+            <div class="traducao">
+                <textarea class="traducao__texto" cols="20" rows="4"></textarea>
+                <button onclick="copiar()" class="traducao__copiar">Copiar</button>
+            </div>
+        </aside>
     </main>
-    <footer class="rodape">
-        <p>Informações pessoasi iadasdasdadiudaspod</p>
+    <footer>
+        <p>Desenvolvido por Matheus Arruda no ano de 2024.</p>
     </footer>
+    <script src="app.js" defer></script>
 </body>
+
 </html>
