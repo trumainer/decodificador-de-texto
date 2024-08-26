@@ -1,33 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
 
-:root{
+:root {
     --cor-primaria: #F3F5FC;
     --cor-secundaria: #0A3871;
+    --cor-placeholder: #356EA9;
     --cor-terciaria: #D8DFE8;
     --fonte-principal: "Inter", sans-serif;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
-    font-family: var(--fonte-principal)
+    font-family: var(--fonte-principal);
+    width: 100vw;
+    height: 100vh;
 }
-.decodificador{
+
+main {
     display: flex;
+    height: 90vh;
 }
-.decodificador__esquerdo{
+
+.centralizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decodificador__esquerdo {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
 }
-.decodificador__esquerdo__cabecalho{
 
+.decodificador__esquerdo__cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 20px;
 }
-.decodificador__esquerdo__main{
 
+.decodificador__esquerdo__cabecalho__logo {
+    width: 120px;
+    height: 48px;
 }
-.decodificador__esquerdo__main__texto{
+
+.decodificador__esquerdo__main__texto {
     background-color: var(--cor-primaria);
     font-family: var(--fonte-principal);
     font-size: 32px;
@@ -35,31 +60,54 @@ body {
     resize: none;
     border: none;
     width: 680px;
-    height: 288px;
+    margin-top: 80px;
+    margin-left: 16%;
 }
-.decodificador__esquerdo__rodape{
+
+::placeholder {
+    color: var(--cor-placeholder);
 }
-.decodificador__esquerdo__rodape__texto{
+
+.decodificador__esquerdo__main__texto: :focus {
+    outline: nome;
+}
+
+.decodificador__esquerdo__rodape {
+    margin-left: 16%;
+    margin-bottom: 72px;
+    gap: 10px;
+}
+
+.decodificador__esquerdo__rodape__aviso {
+    display: flex;
+    flex-direction: row;
     font-family: var(--fonte-principal);
     font-size: 12px;
+    gap: 3px;
+    margin-bottom: 16px;
+}
+
+.decodificador__esquerdo__rodape__btn {
+    display: flex;
+    gap: 20px;
 
 }
-.decodificador__esquerdo__rodape__botao{
-    
-}
-.decodificador__esquerdo__rodape__criptografar{
+
+.decodificador__esquerdo__rodape__btn__criptografar {
     background-color: var(--cor-secundaria);
-    width: 328px;
-    height: 67px;
     gap: 8px;
     padding: 24px;
     border-radius: 24px;
+    border: none;
     text-align: center;
     font-family: var(--fonte-principal);
     font-size: 16px;
-    color: #FFFFFF;  
+    color: #FFFFFF;
+    width: 328px;
+    height: 67px;
 }
-.decodificador__esquerdo__rodape__descriptografar{
+
+.decodificador__esquerdo__rodape__btn__descriptografar {
     background-color: var(--cor-terciaria);
     border: solid 1px var(--cor-secundaria);
     width: 328px;
@@ -71,16 +119,82 @@ body {
     font-family: var(--fonte-principal);
     font-size: 16px;
     color: var(--cor-secundaria);
-
 }
-.decodificador__direito{
 
-}
-.decodificador__direito__texto{
-    border-radius: 32px;
-    border: none;
-    width: 400px;
-    height: 944px;
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     resize: none;
-    background-image: url("../assets/fundo_decodificador.svg");
+    border: none;
+    width: 30%;
+}
+
+.mensagem {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin: 40px 20px;
+    border-radius: 32px;
+}
+
+.mensagem__texto {
+    width: 336px;
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.mensagem__p {
+    width: 336px;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.traducao {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 40px;
+    border-radius: 32px;
+    background-color: #FFFFFF;
+}
+
+.traducao__texto {
+    height: 76%;
+    border-radius: 32px;
+    resize: none;
+    border: none;
+    padding: 32px;
+    font-size: 24px;
+    color: #495057;
+    font-weight: 400;
+}
+
+.traducao__copiar {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    width: 336px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--cor-secundaria);
+    margin: 32px;
+    background-color: #FFFFFF;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
 }
